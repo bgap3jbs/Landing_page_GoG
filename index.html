@@ -5,7 +5,7 @@
     <title>Game of Games</title>
     <style>
         body {
-            font-family: 'Georgia', serif; /* Old-fashioned serif font */
+            font-family: Arial, sans-serif;
             background-image: url("your_background.png");
             background-size: cover;
             background-position: center;
@@ -17,7 +17,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: #fff;
+            color: #000; /* Changed text color to black for better readability */
             text-align: center;
         }
 
@@ -48,8 +48,8 @@
             margin-top: 30px;
             border-radius: 12px;
             border: none;
-            background-color: #8B0000;
-            color: #6B0000; /* Dark red for button text */
+            background-color: #B22222; /* Dark red button color */
+            color: #F5F5F5;  /* Light gray text color on buttons */
             font-size: 24px;
             cursor: pointer;
             transition: all 0.3s ease-in-out;
@@ -58,8 +58,7 @@
         }
 
         button:hover {
-            background-color: #A52A2A;
-            color: white; /* Change text color on hover */
+            background-color: #8B0000; /* Darker red on hover */
             transform: scale(1.1);
         }
 
@@ -79,7 +78,7 @@
         <div class="button-container">
             <button onclick="window.location.href='https://game-of-games.onrender.com/player_login'">Enter, Player</button>
             <button onclick="window.location.href='https://game-of-games.onrender.com/login'">Enter, Puppet Master</button>
-            <button onclick="window.location.href='/path/to/lore-pdf.pdf'">Unlock the Lore</button>
+            <button onclick="window.location.href='https://github.com/your-username/your-repository-name/raw/main/Game_of_games_profiles.pdf'">Unlock the Lore</button>
         </div>
     </div>
 </body>
