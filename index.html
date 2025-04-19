@@ -67,6 +67,42 @@
             justify-content: center;
             gap: 20px;
         }
+
+        .password-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .password-modal input {
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .password-modal button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #B22222;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .password-modal button:hover {
+            background-color: #8B0000;
+        }
     </style>
 </head>
 <body>
@@ -78,8 +114,33 @@
         <div class="button-container">
             <button onclick="window.location.href='https://game-of-games.onrender.com/player_login'">Enter, Player</button>
             <button onclick="window.location.href='https://game-of-games.onrender.com/login'">Enter, Puppet Master</button>
-            <button onclick="window.location.href='https://github.com/bgap3jbs/Landing_page_GoG/raw/main/Game_of_games_profiles.pdf'">Unlock the Lore</button>
+            <button onclick="showPasswordPrompt()">Unlock the Lore</button>
         </div>
     </div>
+
+    <!-- Password modal -->
+    <div id="passwordModal" class="password-modal">
+        <h2>Please enter the password to unlock the lore</h2>
+        <input type="password" id="passwordInput" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <script>
+        const correctPassword = "Younevergetthis1999"; // Change this to your desired password
+
+        function showPasswordPrompt() {
+            document.getElementById("passwordModal").style.display = "flex";
+        }
+
+        function checkPassword() {
+            const userPassword = document.getElementById("passwordInput").value;
+
+            if (userPassword === correctPassword) {
+                window.location.href = 'https://github.com/bgap3jbs/Landing_page_GoG/raw/main/Game_of_games_profiles.pdf'; // Link to the PDF
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
 </body>
 </html>
